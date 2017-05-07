@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<litepal>
+    <dbname value = "magic_mirror_weather" />
+    <version value = "1"/>
+    <list>
+        <mapping class = "com.example.administrator.magicmirror.db.Province"/>
+        <mapping class = "com.example.administrator.magicmirror.db.City"/>
+        <mapping class = "com.example.administrator.magicmirror.db.County"/>
+    </list>
+</litepal>
