@@ -1,38 +1,44 @@
 package com.example.administrator.magicmirror.db;
 
 import org.litepal.crud.DataSupport;
-
 /**
- * Created by Administrator on 2017/5/7.
+ * Created by Administrator on 2017/5/8.
  */
-//记录城市信息
 public class City extends DataSupport {
     private int id;
     private String cityName;
     private int cityCode;
     private int provinceId;
-    public int getId(){
+
+    public int getId() {
         return id;
     }
-    public void setId(int id){
+
+    public void setId(int id) {
         this.id = id;
     }
-    public String getCityName(){
+
+    public String getCityName() {
         return cityName;
     }
-    public void setCityName(String cityName){
+
+    public void setCityName(String cityName) {
         this.cityName = cityName;
     }
-    public int getCityCode(){
+
+    public int getCityCode() {
         return cityCode;
     }
-    public void setCityCode(int cityCode){
+
+    public void setCityCode(int cityCode) {
         this.cityCode = cityCode;
     }
-    public int getProvinceId(){
+
+    public int getProvinceId() {
         return provinceId;
     }
-    public void setProvinceId(int provinceId){
+
+    public void setProvinceId(int provinceId) {
         this.provinceId = provinceId;
     }
 }
