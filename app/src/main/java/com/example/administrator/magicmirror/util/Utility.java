@@ -5,11 +5,13 @@ import android.text.TextUtils;
 import com.example.administrator.magicmirror.db.County;
 import com.example.administrator.magicmirror.db.Province;
 import com.example.administrator.magicmirror.db.City;
+import com.example.administrator.magicmirror.gson.Weather;
 
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import com.google.gson.Gson;
 /**
  * Created by Administrator on 2017/5/8.
  */
@@ -72,5 +74,17 @@ public class Utility {
             }
         }
         return false;
+    }
+    /*解析返回的JSON数据*/
+    public static Weather handleWeatherResponse(String response){
+        try{
+            JSONObject jsonObject = new JSONObject(response);
+            JSONArray jsonArray = jsonObject.getJSONArray("HeWeather");
+            String weatherContent = jsonArray.getJSONObject(0).toString();
+            return new Gson().fromJson(weatherContent,Weather.class);
+        }catch (Exception e){
+            e.printStackTrace();
+        }
+        return null;
     }
 }
